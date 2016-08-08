@@ -7,16 +7,23 @@ module.exports = (function() {
     console.log('Locations excecuting!')
 
     return {
-        getRoomDescription: getRoomDescription,
-        roomsList: rooms
+        roomsList: rooms,
+        getRoomDescription: getUserRoomDescription,
+        getRoomExits: getRoomExits,
+        addItemToRoom: null,
+        removeItemFromRoom: null,
+        getAt: null, //Return room object from roomList with the supplied id
     }
 
-    function getRoomDescription(hash) {
+    function getUserRoomDescription(hash) {
+        // store.update(hash, { current_location: 1 })
         let user = store.getState(hash)
-        //DUMMY CODE WARNING BELOW
-        let loc = 0
+        let loc = user.current_location
         return rooms[loc].getDescription()
-          
+    }
+    function getRoomExits(loc){
+        return rooms[loc].getExits()
+
     }
 }());
 

@@ -2,8 +2,10 @@
 "champagne":{
     "id": 0,
     "name": "Champagne Room",
-    "description": "Absolutely no sex is allowed here. There are chairs arranged around a coffee table with magazines in the center of the room. There is one drug on the table next to a spoon.",
-"exits": [],
+    "description": "Absolutely no sex is allowed here. There are chairs arranged around a coffee table with magazines in the center of the room. There is one drug on the table next to a spoon. A doorway leads west.",
+"exits": [
+    { "direction": "west", "location": 1 }
+],
 "items": [],
 "isQuitRoom": false
 }, 

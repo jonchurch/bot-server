@@ -1,9 +1,11 @@
-const Music = require('./music')
-const Casual = require('./casual')
-const Look = require('./look')
+const MusicHandler = require('./music')
+const CasualHandler = require('./casual')
+const LookHandler = require('./look')
+const ExitHandler = require('./exit')
 
 module.exports = {
-  casual: new Casual(),
-  music: new Music(),
-  look: new Look()
+  casual: new CasualHandler(),
+  music: new MusicHandler(),
+  look: new LookHandler(),
+  exit: new ExitHandler()
 }
